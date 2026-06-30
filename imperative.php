@@ -26,4 +26,10 @@ $categories = [
          ]
 ];
 
+    foreach($categories as $key ) {
+        if(empty($key["produits"])){
+            echo $key["nom"]."\n";
+        }
+    } 
+
 ?>
