@@ -95,5 +95,5 @@ $categories = [
         ];
         $categories[$key["produit"][] = $produit];
     }
-    echo"la categorie n'exite pas"; 
+    echo"la categorie n'exite pas \n"; 
 ?>
