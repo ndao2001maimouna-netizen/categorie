@@ -70,5 +70,30 @@ $categories = [
        
     }while($nomValide);
 
+//4
+    $categorie = [
+        "code" => $code,
+        "nom"  => $nom,
+        "produits" => []
+    ];
 
+    $categories[] = $categorie;
+
+    $categorieExit = false;
+    $code = readline("saisie le code: ");
+    foreach($categories as $key => $categorie){
+        if($categorie["code"]=== $code){
+            $categorieExit = true;
+        }
+    }
+    if ($categorieExit){
+        $produit = [
+            "nom" => readline("Saisie nom: "),
+            "reference" => readline("Saisie reference: "),
+            "prix" => (int)readline("Saisie prix: "),
+            "quantite" =>(int) readline("Saisie quantite: ")
+        ];
+        $categories[$key["produit"][] = $produit];
+    }
+    echo"la categorie n'exite pas"; 
 ?>
