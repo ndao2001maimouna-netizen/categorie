@@ -96,4 +96,58 @@ $categories = [
         $categories[$key["produit"][] = $produit];
     }
     echo"la categorie n'exite pas \n"; 
+
+
+        $codValide = true;
+    do{
+        $code = readline("saisie le code: ");
+        if(empty($code)){
+            echo"code obligatoire \n";
+            $codValide = false;            
+        }
+        foreach($categories as $key){
+            if($key["code"]===$code){
+                $codValide = false;
+                echo"le code exite deja \n";
+            }
+        }
+
+    }while($codValide);
+
+
+     $nomValide = true;
+    do{
+        $nom = readline("saisie le nom: ");
+        if(empty($nom)){
+            echo"code obligatoire \n";
+            $nomValide = false;            
+        }
+        foreach($categories as $key){
+            if($key["nom"]===$nom){
+                $nomValide = false;
+                echo"le nom exite deja \n";
+            }
+        }
+
+    }while($nomValide);
+
+    $produit=[];
+do{
+    $produit = [
+        "nom" => readline("Saisie nom: "),
+        "reference" => readline("Saisie reference: "),
+        "prix" => (int)readline("Saisie prix: "),
+        "quantite" =>(int) readline("Saisie quantite: ")     
+    ];
+    $produits[] = produit;
+    $choix =  strtolower(redline("voulez continuer oui/non"));
+}while($choix === "oui");
+
+$categorie = [
+        "code" => $code,
+        "nom"  => $nom,
+        "produits" => $produits
+    ];
+
+$categories[] = $categorie;
 ?>
