@@ -1,6 +1,6 @@
 <?php
 
-categories = [
+$categories = [
 
    0 =>      [
             "code" => "01",
