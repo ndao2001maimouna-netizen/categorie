@@ -32,4 +32,23 @@ $categories = [
         }
     } 
 
+        $codvalide = true;
+    do{
+        $code = readline("Saisie le code : ");
+        if (empty($code)){
+            echo "Le code est obligatiore.\n";
+            $codvalide = false;
+        }
+        $codExiste = true;
+        foreach($categories as $key){
+            if ($key["code"]=== $code){
+                $codExiste = true;
+                break;
+            }
+        }
+        if($codExiste){
+            echo"le code exite deja. \n";
+        }
+    }while($codExiste);
+
 ?>
