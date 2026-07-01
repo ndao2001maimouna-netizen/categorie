@@ -1,4 +1,5 @@
 <?php
+//1
 $categories = [
 
    0 =>      [
@@ -25,13 +26,13 @@ $categories = [
             "produits" => []
          ]
 ];
-
+//2
     foreach($categories as $key ) {
         if(empty($key["produits"])){
             echo $key["nom"]."\n";
         }
     } 
-
+//3
         $codValide = true;
     do{
         $code = readline("Saisie le code : ");
