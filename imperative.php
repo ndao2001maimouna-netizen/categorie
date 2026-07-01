@@ -50,4 +50,24 @@ $categories = [
        
     }while($codValide);
 
+     $nomValide = true;
+
+    do{
+        $nom = readline("Saisie le nom : ");
+        if (empty($nom)){
+            echo "Le code est obligatiore.\n";
+            $nomValide = false;
+        }
+       
+        foreach($categories as $key){
+            if ($key["nom"]=== $nom){
+                $nomValide = false;
+                echo"le code exite deja. \n";
+                
+            }
+        }
+       
+    }while($nomValide);
+
+
 ?>
