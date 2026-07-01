@@ -39,5 +39,8 @@ function afficheCategoriesSansProduit(array $categories): void{
  function saisieChaine(string $messag):string{
     return readline($messag);
  }
+ function obligatoire(){
+    
+ }
 
-?>
+?>  
